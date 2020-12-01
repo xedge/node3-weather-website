@@ -22,7 +22,7 @@ weatherForm.addEventListener('submit', (event) => {
     const location = search.value
     messageOne.textContent = 'Loading Message'
     messageTwo.textContent = ''
-    fetch('https://exnodejs-yanuarvalentino147494.codeanyapp.com/weather?address='+location).then((response) => {
+    fetch('/weather?address='+location).then((response) => {
     response.json().then(({error='',forecast,location,address} = {}) => {
         if(error)
         {
